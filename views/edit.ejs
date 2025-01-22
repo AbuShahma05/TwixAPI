@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>EDIT YOUR POST</h2>
+    <div>
+        <p>POST ID: <% Account.id %></p>
+        <p>USERNAME: <% Account.username %></p>
+        <form method="post" action="/twitter/<%= Account.id %>?_method=PATCH">
+            <textarea name="info"><%= Account.info  %></textarea>
+            <textarea name="tweet"><%= Account.tweet  %></textarea>
+            <button>submit</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+<!-- updated code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="linedit" style="text-align:center;">EDIT YOUR POST</h2>
+        <div class="box2">
+            <p id="acid"><b>POST ID: </b> <%= Account.id %></p>
+            <br>
+            <p id="acuser"><b>Username:</b> @<%= Account.username %></p>
+            <br>
+            <div class="box3">
+                <form  method="POST" action="/twitter/<%= Account.id %>?_method=PATCH">
+                    <textarea name="info"><%= Account.info  %></textarea>
+                    <textarea name="tweet"><%= Account.tweet  %></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>

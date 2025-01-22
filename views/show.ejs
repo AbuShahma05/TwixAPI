@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HERE IS YOUR INFORMATION</h2>
+    <P><%= Account.id %></P>
+    <div>
+        <h3>username: @<%=Account.username %></h3>
+        <h3>bio: <%=Account.info%></h3>
+        <h4>twet: <%=Account.tweet%></h4>
+    </div>
+</body>
+</html> -->
+
+<!-- updated code  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="line"  style="text-align:center;">Your Thoughts, Your Tweets</h1>
+
+        <div class="box">
+            <div class="account-info">
+                <h3>Username: @<%= Account.username %></h3>
+                <br>
+                <h4>Bio: <%= Account.info %></h4>
+                <br>
+                <p>Tweet: <%= Account.tweet %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
