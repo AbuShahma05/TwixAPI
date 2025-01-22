@@ -7,6 +7,13 @@ const { v4: uuidv4 } = require('uuid');
 
 const port = 3000;
 
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"))
+
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({extended: true}))
+app.use(methodoverride('_method'))
+
 let Accounts = [
     {
         id : uuidv4(),
@@ -27,14 +34,6 @@ let Accounts = [
         tweet : "hey this is my first tweet"
     },
 ]
-
-
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"))
-
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({extended: true}))
-app.use(methodoverride('_method'))
 
 app.get("/", (req, res) => {
     res.send("Server working well")
