@@ -35,9 +35,6 @@ let Accounts = [
     },
 ]
 
-app.get("/", (req, res) => {
-    res.send("Server working well")
-})
 
 app.get("/twitter", (req, res) => {
     res.render("index.ejs", {Accounts})
